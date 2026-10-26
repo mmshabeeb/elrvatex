@@ -1,0 +1,13 @@
+{
+  "name": "ElevateX Now Business Service",
+  "short_name": "ElevateX",
+  "description": "Custom Software, Mobile App Engineering, Performance Marketing & Venture Infrastructure",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090a12",
+  "theme_color": "#090a12",
+  "icons": [
+    { "src": "/logo.jpg", "sizes": "192x192", "type": "image/jpeg" },
+    { "src": "/logo.jpg", "sizes": "512x512", "type": "image/jpeg" }
+  ]
+}
