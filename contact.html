@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/nav.css"/>
   <style>
     :root {
       --bg: #090a12;
@@ -25,13 +26,7 @@
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.75; padding-bottom: 3rem; }
-    nav { background: rgba(9, 10, 18, 0.95); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); padding: 0 5%; height: 72px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
-    .logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.25rem; color: #fff; text-decoration: none; display: flex; align-items: center; gap: 0.6rem; }
-    .logo img { width: 36px; height: 36px; border-radius: 8px; }
-    .logo span { background: var(--grad-main); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .nav-link-back { font-size: 0.9rem; color: var(--cyan); text-decoration: none; font-weight: 500; }
-    .nav-link-back:hover { text-decoration: underline; }
-    main { max-width: 980px; margin: 0 auto; padding: 50px 1.5rem; }
+    main { max-width: 980px; margin: 0 auto; padding: 120px 1.5rem 50px; }
     h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; color: #fff; margin-bottom: 0.5rem; }
     .contact-intro { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 2.5rem; max-width: 720px; }
     
@@ -70,13 +65,115 @@
 </head>
 <body>
 
-<nav>
-  <a class="logo" href="/">
-    <img src="/logo.jpg" alt="ElevateX Now"/>
-    ELEVATE<span>X</span> NOW
-  </a>
-  <a href="/" class="nav-link-back">← Back to Home</a>
-</nav>
+  <!-- Header - Universal Floating Capsule -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-inner">
+      <a href="/" class="brand-logo" aria-label="ElevateX Now Homepage">
+        <img src="/logo.jpg" alt="ElevateX Now" class="logo-badge-img" width="36" height="36"/>
+        <div class="logo-title-group">
+          <span class="logo-main-text">ELEVATE<span class="logo-x-accent">X</span> NOW</span>
+          <span class="logo-sub-tag">TECH &amp; GROWTH</span>
+        </div>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a href="/software-development.html" class="nav-link-item">
+              <span>Software &amp; Apps</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/marketing.html" class="nav-link-item">
+              <span>Marketing &amp; Ads</span>
+            </a>
+          </li>
+          <li class="nav-item nav-has-dropdown">
+            <button class="nav-dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false">
+              <span>All Services</span>
+              <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="nav-dropdown-menu">
+              <a href="/software-development.html" class="dropdown-card-item">
+                <div class="dd-card-icon" style="color: #06b6d4;">💻</div>
+                <div class="dd-card-text">
+                  <div class="dd-card-title">Custom Software &amp; SaaS</div>
+                  <div class="dd-card-desc">Web platforms, microservices &amp; APIs</div>
+                </div>
+              </a>
+              <a href="/software-development.html#mobile" class="dropdown-card-item">
+                <div class="dd-card-icon" style="color: #818cf8;">📱</div>
+                <div class="dd-card-text">
+                  <div class="dd-card-title">iOS &amp; Android Apps</div>
+                  <div class="dd-card-desc">60 FPS native apps in Flutter &amp; Swift</div>
+                </div>
+              </a>
+              <a href="/marketing.html" class="dropdown-card-item">
+                <div class="dd-card-icon" style="color: #f43f5e;">📈</div>
+                <div class="dd-card-text">
+                  <div class="dd-card-title">Performance Marketing</div>
+                  <div class="dd-card-desc">Meta CAPI &amp; Google Ads PMax scaling</div>
+                </div>
+              </a>
+              <a href="/branding.html" class="dropdown-card-item">
+                <div class="dd-card-icon" style="color: #a855f7;">🎨</div>
+                <div class="dd-card-text">
+                  <div class="dd-card-title">Brand Identity &amp; UI/UX</div>
+                  <div class="dd-card-desc">Figma prototypes &amp; design systems</div>
+                </div>
+              </a>
+              <a href="/startup-registration.html" class="dropdown-card-item">
+                <div class="dd-card-icon" style="color: #10b981;">🏢</div>
+                <div class="dd-card-text">
+                  <div class="dd-card-title">Startup Incorporation</div>
+                  <div class="dd-card-desc">Pvt Ltd, LLP, MSME Udyam &amp; MCA setup</div>
+                </div>
+              </a>
+              <a href="/legal-compliance.html" class="dropdown-card-item">
+                <div class="dd-card-icon" style="color: #38bdf8;">⚖️</div>
+                <div class="dd-card-text">
+                  <div class="dd-card-title">Trademark &amp; IP Protection</div>
+                  <div class="dd-card-desc">Trademark search, filing &amp; compliance</div>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="/about.html" class="nav-link-item">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="/contact.html" class="nav-link-item active">
+              <span class="nav-dot-active"></span>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="/contact.html" class="btn-nav-cta">
+          <span>Book Free Call</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="/software-development.html" class="mob-link">💻 Custom Software &amp; Mobile Apps</a>
+    <a href="/marketing.html" class="mob-link">📈 Performance Marketing &amp; SEO</a>
+    <a href="/branding.html" class="mob-link">🎨 Brand Identity &amp; UI/UX</a>
+    <a href="/startup-registration.html" class="mob-link">🏢 Startup Registration (Pvt Ltd / LLP)</a>
+    <a href="/legal-compliance.html" class="mob-link">⚖️ Legal, IP &amp; Trademark Protection</a>
+    <a href="/about.html" class="mob-link">ℹ️ About Us</a>
+    <a href="/contact.html" class="mob-link active">📞 Contact Us</a>
+    <a href="/contact.html" class="mob-cta">Book Free Call →</a>
+  </div>
 
 <main>
   <h1>Contact Us</h1>
@@ -263,6 +360,6 @@
     });
   }
 </script>
-
+<script src="/nav.js" defer></script>
 </body>
 </html>
